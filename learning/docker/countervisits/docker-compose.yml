@@ -2,7 +2,8 @@ version: '3'
 services: 
     redis-server:
         image: 'redis'
-    node-app: 
+    node-app:
+        restart: unless-stopped
         build: .
         ports:
-            - "8585:8585"   
+            - "4007:8585"   
